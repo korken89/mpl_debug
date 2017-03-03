@@ -43,12 +43,12 @@ struct name_printer
     std::cout << "      " << type_name<U>() << ",\n";
   }
 
-  template <typename ID, typename... U>
-  void operator()(brigand::type_<rtfm::Resource<ID, U...>>)
-  {
-    std::cout << "  Resource type:  " << type_name<ID>() << ",\n";
-    print_list<brigand::list<U...>>("Resource Job List", "    ");
-  }
+//  template <typename ID, typename... U>
+//  void operator()(brigand::type_<rtfm::Resource<ID, U...>>)
+//  {
+//    std::cout << "  Resource type:  " << type_name<ID>() << ",\n";
+//    print_list<brigand::list<U...>>("Resource Job List", "    ");
+//  }
 };
 
 template <typename T>
